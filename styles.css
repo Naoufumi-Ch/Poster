@@ -3,11 +3,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: #0ad5f0;
 }
 
 /* Encabezado */
 header {
-    background-color: #333;
+    background-color: #0ad5f0;
     color: #fff;
     padding: 20px;
     display: flex;
@@ -131,7 +132,7 @@ nav a:hover {
 
 /* Pie de página */
 footer {
-    background-color: #333;
+    background-color: #18ceee;
     color: #fff;
     padding: 20px;
     text-align: center;
