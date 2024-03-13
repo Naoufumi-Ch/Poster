@@ -12,7 +12,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-               
+                
             </ul>
         </nav>
     </header>
@@ -29,10 +29,19 @@
 
         <section class="about">
             <h2>Sobre Mercedes Roa</h2>
-            <p>Mercedes Roa es más que una amiga; es un rayo de luz, una sonrisa que transforma los días grises en arcoíris de alegría. Su bondad y amabilidad son un regalo que enriquece nuestras vidas, recordándonos constantemente la belleza que existe en el mundo.</p>
-            <p>Esta página es un pequeño tributo a la extraordinaria Mercedes Roa, una amiga valiosa cuyo impacto perdura en cada momento compartido. Que su luz continúe brillando y que siempre sepa cuánto se aprecia y se valora su presencia en nuestras vidas.</p>
-
+            <p>Mercedes Roa, una mente brillante que ilumina los pasillos de la universidad con su conocimiento y determinación. Su pasión por el aprendizaje se refleja en cada paso que da, convirtiendo cada desafío en una oportunidad de crecimiento.</p>
+        
+            <p>Además de ser una estudiante excepcional, Mercedes tiene un gusto único que agrega color a su vida. Cuando no está inmersa en los libros, se sumerge en el fascinante mundo de los animes, donde la imaginación florece y la creatividad se desborda.</p>
+        
+            <p>Su corazón late al ritmo de la música coreana, encontrando melodías que resuenan con sus emociones más profundas. Cada nota es una expresión de su alma, llevándola a lugares lejanos sin salir de su espacio vital.</p>
+        
+            <p>Pero no te equivoques, Mercedes no es solo intelecto y arte, también tiene un espíritu lleno de aventuras. En el campo de batalla virtual, se transforma en una maestra de Free Fire, demostrando habilidades estratégicas y un espíritu competitivo.</p>
+        
+            <p>Lo más impresionante de todo es su nobleza innata. Mercedes Roa es una amiga leal, dispuesta a brindar apoyo en los buenos y malos momentos. Su generosidad y compasión crean un ambiente cálido y acogedor para todos los que tienen el privilegio de conocerla.</p>
+        
+            <p>Esta página es un homenaje a la multifacética Mercedes Roa, una joya en nuestro universo personal. Que su luz continúe guiándonos y que su alegría siga siendo la melodía que nos inspira día tras día.</p>
         </section>
+        
 
         <section class="gallery">
             <h2>Galería de Mercedes</h2>
@@ -40,41 +49,62 @@
                 <div class="image-item">
                     <img src="img/merce1.jpg" alt="Mercedes- Image 1">
                     <div class="overlay">
-                        <p>Descripción del Mercedes- Image 1</p>
+                        <p>
+                            En la simplicidad de una imagen se revela la complejidad del alma. La fotografía captura el instante efímero de un viaje, donde la luz y la sombra danzan en armonía. En Mercedes, cada píxel cuenta una historia, cada tono de color es un susurro del tiempo. Observa con detenimiento, y encontrarás no solo una imagen, sino una ventana hacia la profundidad de la existencia.
+                        </p>
                     </div>
                 </div>
                 <div class="image-item">
                     <img src="img/merce2.jpg" alt="Mercedes- Image 2">
                     <div class="overlay">
-                        <p>Descripción del Mercedes- Image 2</p>
+                        <p>
+                            En Mercedes, la naturaleza se convierte en poesía visual. Cada hoja, cada rama, es un verso en el gran libro de la existencia. La fotografía captura el momento en que el viento acaricia la tierra, y la vida danza en la sinfonía del universo.
+                        </p>
                     </div>
                 </div>
                 <div class="image-item">
                     <img src="img/merce3.jpg" alt="Mercedes- Image 3">
                     <div class="overlay">
-                        <p>Descripción del Mercedes- Image 3</p>
+                        <p>
+                            En el reflejo de Mercedes, se revela la dualidad de la realidad. El agua serena, un espejo que distorsiona y revela la verdad al mismo tiempo. ¿Qué es real y qué es reflejo? Cada imagen es una pregunta, una invitación a explorar las profundidades de la percepción.
+                        </p>
                     </div>
                 </div>
                 <div class="image-item">
                     <img src="img/merce4.jpg" alt="Mercedes- Image 4">
                     <div class="overlay">
-                        <p>Descripción del Mercedes- Image 4</p>
+                        <p>
+                            Mercedes- Image 4 es un rincón del mundo capturado en una instantánea. Cada detalle, cada sombra, es una pequeña obra maestra. La fotografía nos recuerda que en lo cotidiano se esconde la extraordinaria belleza, esperando ser descubierta con ojos de asombro y aprecio.
+                        </p>
                     </div>
                 </div>
                 <div class="image-item">
                     <img src="img/merce5.jpg" alt="Mercedes- Image 5">
                     <div class="overlay">
-                        <p>Descripción del Mercedes- Image 5</p>
+                        <p>
+                            En Mercedes- Image 5, la luz y la oscuridad entrelazan sus brazos en una danza eterna. La fotografía es un recordatorio de que incluso en los momentos más oscuros, la belleza persiste, aguardando pacientemente su momento para brillar. Cada sombra es un preludio a la resplandeciente luz de la esperanza.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
                 <section class="video-section">
-                    <h2>Video de Mercedes Roa</h2>
-                    <video controls width="600" height="400">
+                    <h2>Sus locuras</h2>
+                    <video autoplay muted width="600" height="400" id="mercedesVideo">
                         <source src="img/merce6.mp4" type="video/mp4">
                         Tu navegador no soporta el elemento de video.
                     </video>
+                </section>
+        
+                <script>
+                    const video = document.getElementById('mercedesVideo');
+        
+                    // Reinicia el video cuando termina
+                    video.addEventListener('ended', function () {
+                        video.currentTime = 0;
+                        video.play();
+                    });
+                </script>
                 </section>
             </div>
         </section>
