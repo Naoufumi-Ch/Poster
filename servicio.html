@@ -3,60 +3,302 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Example Website</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Influencer Site</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
+  <styles>
+    /* styles.css */
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Encabezado y navegación */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-image {
+  max-width: 50%;
+}
+
+.image-slider {
+  display: flex;
+  overflow: hidden;
+}
+
+.image-slider img {
+  max-width: 100%;
+  height: auto;
+  animation: slide 10s infinite;
+}
+
+/* Contenido principal */
+main {
+  padding: 40px;
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.post-card {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+}
+
+.post-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.read-more {
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.ad-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.subscribe-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#subscribe-form input {
+  padding: 10px;
+  width: 300px;
+}
+
+#subscribe-form button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Pie de página */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-links a {
+  color: white;
+  margin: 0 10px;
+  font-size: 24px;
+}
+
+/* Animación del carrusel */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  45% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  70% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  95% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+  </styles>
 <body>
   <header>
     <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+      <div class="logo">Influencer Site</div>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="#">Artículos</a>
+        <a href="#">Sobre mí</a>
+        <a href="#">Contacto</a>
+      </div>
     </nav>
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Bienvenidos a mi sitio</h1>
+        <p>Comparto contenido sobre moda, estilo de vida y más</p>
+      </div>
+      <div class="hero-image">
+        <div class="image-slider">
+          <img src="https://via.placeholder.com/600x400" alt="Slide 1">
+          <img src="https://via.placeholder.com/600x400" alt="Slide 2">
+          <img src="https://via.placeholder.com/600x400" alt="Slide 3">
+        </div>
+      </div>
+    </div>
   </header>
-
+  
   <main>
-    <section>
-      <h1>Welcome to our Website</h1>
-      <p>This is a sample content section.</p>
+    <section class="featured-posts">
+      <h2>Artículos destacados</h2>
+      <div class="post-grid">
+        <div class="post-card">
+          <img src="https://via.placeholder.com/400x300" alt="Post 1">
+          <h3>Título del artículo 1</h3>
+          <p>Descripción breve del artículo...</p>
+          <a href="#" class="read-more">Leer más</a>
+        </div>
+        <!-- Más tarjetas de artículos aquí -->
+      </div>
     </section>
-
-    <section>
-      <h2>About Us</h2>
-      <p>Here you can provide information about your company or organization.</p>
+    
+    <section class="ad-section">
+      <h2>Patrocinadores</h2>
+      <div class="ad-container">
+        <!-- Aquí se insertarán los anuncios -->
+      </div>
     </section>
-
-    <section>
-      <h2>Our Services</h2>
-      <ul>
-        <li>Service 1</li>
-        <li>Service 2</li>
-        <li>Service 3</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Contact Us</h2>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit">Send</button>
+    
+    <section class="subscribe-section">
+      <h2>Suscríbete para más contenido</h2>
+      <form id="subscribe-form">
+        <input type="email" placeholder="Ingresa tu email" required>
+        <button type="submit">Suscribirse</button>
       </form>
     </section>
   </main>
-
+  
   <footer>
-    <p>&copy; 2023 Example Website. All rights reserved.</p>
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p>&copy; 2023 Influencer Site. Todos los derechos reservados.</p>
+    </div>
   </footer>
+  
+  <script src="script.js">
+    // script.js
+// Carrusel de imágenes
+const imageSlider = document.querySelector('.image-slider');
+const slides = imageSlider.querySelectorAll('img');
+let currentSlide = 0;
+
+function showSlide(n) {
+  slides.forEach((slide, index) => {
+    if (index === n) {
+      slide.style.display = 'block';
+    } else {
+      slide.style.display = 'none';
+    }
+  });
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+setInterval(nextSlide, 5000); // Cambia de imagen cada 5 segundos
+
+// Formulario de suscripción
+const subscribeForm = document.getElementById('
+
+    <!-- Resto del código HTML -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script>
+  // Instancia de Vue para manejar el formulario de suscripción
+  const app = new Vue({
+    el: '#subscribe-form',
+    data: {
+      email: ''
+    },
+    methods: {
+      submitForm() {
+        // Aquí puedes agregar la lógica para enviar el email a tu sistema de correo
+        console.log('Email ingresado:', this.email);
+        this.email = ''; // Limpia el campo de email después de enviar
+      }
+    }
+  });
+
+  // Función para insertar los anuncios
+  function insertAds() {
+    const adContainer = document.querySelector('.ad-container');
+    const adCode = `
+      <ins class="adsbygoogle"
+           style="display:block; text-align:center;"
+           data-ad-layout="in-article"
+           data-ad-format="fluid"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="XXXXXXXXXX"></ins>
+    `;
+    adContainer.innerHTML = adCode;
+
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  }
+
+  // Llama a la función para insertar los anuncios
+  insertAds();
+
+  // Carrusel de imágenes (código anterior)
+  // ...
+</script>                                          
+  </script>
 </body>
 </html>
