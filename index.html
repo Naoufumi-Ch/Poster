@@ -1,120 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poster Mercedes</title>
+    <title>Descarga la App de RubénDC</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+    <style>
+        /* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+header {
+    padding: 20px 0;
+    background-color: #16213e;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.animated-title {
+    font-size: 2.5rem;
+    color: #00aaff;
+    animation: fadeInDown 2s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.description {
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.description p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    animation: textGlow 2s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 5px #00aaff, 0 0 10px #00aaff, 0 0 15px #00aaff, 0 0 20px #00aaff, 0 0 25px #00aaff;
+    }
+    50% {
+        text-shadow: 0 0 20px #00aaff, 0 0 30px #00aaff, 0 0 40px #00aaff, 0 0 50px #00aaff, 0 0 60px #00aaff;
+    }
+    100% {
+        text-shadow: 0 0 5px #00aaff, 0 0 10px #00aaff, 0 0 15px #00aaff, 0 0 20px #00aaff, 0 0 25px #00aaff;
+    }
+}
+
+.animated-button {
+    padding: 15px 30px;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.animated-button:hover {
+    background-color: #007acc;
+    transform: scale(1.1);
+}
+
+#notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffcc00;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+}
+
+#notification p {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: #16213e;
+    color: #00aaff;
+    padding: 10px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hidden {
+    display: none;
+}
+        
+    </style>
 <body>
     <header>
-        <h1>Hello</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="servicio.html">servicio</a></li>
-                
-            </ul>
-        </nav>
+        <h1 class="animated-title">Descargar...</h1>
     </header>
-
+    
     <main>
-        <section class="hero">
-            <img src="img/merce.jpg" alt="Mercedes Roa Hero Image">
-
-            <div class="hero-content">
-                <h2>Mercedes Roa: Una Maravilla En El Mundo Mundial</h2>
-                <p>Descubre la extraordinaria belleza y encanto de Mercedes Roa, una joya única en nuestro mundo. Su presencia ilumina nuestras vidas, al igual que los rayos del sol acarician la mañana.</p>
-            </div>
-        </section>
-
-        <section class="about">
-            <h2>Sobre Mercedes Roa</h2>
-            <p>Mercedes Roa, una mente brillante que ilumina los pasillos de la universidad con su conocimiento y determinación. Su pasión por el aprendizaje se refleja en cada paso que da, convirtiendo cada desafío en una oportunidad de crecimiento.</p>
-        
-            <p>Además de ser una estudiante excepcional, Mercedes tiene un gusto único que agrega color a su vida. Cuando no está inmersa en los libros, se sumerge en el fascinante mundo de los animes, donde la imaginación florece y la creatividad se desborda.</p>
-        
-            <p>Su corazón late al ritmo de la música coreana, encontrando melodías que resuenan con sus emociones más profundas. Cada nota es una expresión de su alma, llevándola a lugares lejanos sin salir de su espacio vital.</p>
-        
-            <p>Pero no te equivoques, Mercedes no es solo intelecto y arte, también tiene un espíritu lleno de aventuras. En el campo de batalla virtual, se transforma en una maestra de Free Fire, demostrando habilidades estratégicas y un espíritu competitivo.</p>
-        
-            <p>Lo más impresionante de todo es su nobleza innata. Mercedes Roa es una amiga leal, dispuesta a brindar apoyo en los buenos y malos momentos. Su generosidad y compasión crean un ambiente cálido y acogedor para todos los que tienen el privilegio de conocerla.</p>
-        
-            <p>Esta página es un homenaje a la multifacética Mercedes Roa, una joya en nuestro universo personal. Que su luz continúe guiándonos y que su alegría siga siendo la melodía que nos inspira día tras día.</p>
+        <section class="description">
+            <p>Descubre la app, Solo un clic.</p>
         </section>
         
-
-        <section class="gallery">
-            <h2>Galería de Mercedes</h2>
-            <div class="gallery-container">
-                <div class="image-item">
-                    <img src="img/merce1.jpg" alt="Mercedes- Image 1">
-                    <div class="overlay">
-                        <p>
-                            En la simplicidad de una imagen se revela la complejidad del alma. La fotografía captura el instante efímero de un viaje, donde la luz y la sombra danzan en armonía. En Mercedes, cada píxel cuenta una historia, cada tono de color es un susurro del tiempo. Observa con detenimiento, y encontrarás no solo una imagen, sino una ventana hacia la profundidad de la existencia.
-                        </p>
-                    </div>
-                </div>
-                <div class="image-item">
-                    <img src="img/merce2.jpg" alt="Mercedes- Image 2">
-                    <div class="overlay">
-                        <p>
-                            En Mercedes, la naturaleza se convierte en poesía visual. Cada hoja, cada rama, es un verso en el gran libro de la existencia. La fotografía captura el momento en que el viento acaricia la tierra, y la vida danza en la sinfonía del universo.
-                        </p>
-                    </div>
-                </div>
-                <div class="image-item">
-                    <img src="img/merce3.jpg" alt="Mercedes- Image 3">
-                    <div class="overlay">
-                        <p>
-                            En el reflejo de Mercedes, se revela la dualidad de la realidad. El agua serena, un espejo que distorsiona y revela la verdad al mismo tiempo. ¿Qué es real y qué es reflejo? Cada imagen es una pregunta, una invitación a explorar las profundidades de la percepción.
-                        </p>
-                    </div>
-                </div>
-                <div class="image-item">
-                    <img src="img/merce4.jpg" alt="Mercedes- Image 4">
-                    <div class="overlay">
-                        <p>
-                            Mercedes. Cada detalle, cada sombra, es una pequeña obra maestra. La fotografía nos recuerda que en lo cotidiano se esconde la extraordinaria belleza, esperando ser descubierta con ojos de asombro y aprecio.
-                        </p>
-                    </div>
-                </div>
-                <div class="image-item">
-                    <img src="img/merce5.jpg" alt="Mercedes- Image 5">
-                    <div class="overlay">
-                        <p>
-                            En Mercedes, la luz y la oscuridad entrelazan sus brazos en una danza eterna. La fotografía es un recordatorio de que incluso en los momentos más oscuros, la belleza persiste, aguardando pacientemente su momento para brillar. Cada sombra es un preludio a la resplandeciente luz de la esperanza.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-                <section class="video-section">
-                    <h2>Sus locuras</h2>
-                    <video autoplay muted width="600" height="400" id="mercedesVideo">
-                        <source src="img/merce6.mp4" type="video/mp4">
-                        Tu navegador no soporta el elemento de video.
-                    </video>
-                </section>
-        
-                <script>
-                    const video = document.getElementById('mercedesVideo');
-        
-                    // Reinicia el video cuando termina
-                    video.addEventListener('ended', function () {
-                        video.currentTime = 0;
-                        video.play();
-                    });
-                </script>
-                </section>
-            </div>
+        <section class="cta">
+            <button id="download-btn" class="animated-button">Descargar ahora</button>
         </section>
     </main>
 
+    <div id="notification" class="hidden">
+        <p>Gracias por la información, ahora estás bajo mi control 😈</p>
+        <button id="close-btn">Cerrar</button>
+    </div>
+
     <footer>
-        <p>&copy; 2024 Mercedes. Todos los derechos reservados.</p>
+        <p>© 2024 Todos los derechos reservados.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+        document.getElementById("download-btn").addEventListener("click", function() {
+    document.getElementById("notification").classList.remove("hidden");
+    document.getElementById("notification").style.display = "block";
+});
+
+document.getElementById("close-btn").addEventListener("click", function() {
+    document.getElementById("notification").style.display = "none";
+});
+    </script>
 </body>
 </html>
